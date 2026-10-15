@@ -1,0 +1,10 @@
+CLOUDFLARE_ACCOUNT_ID=
+R2_ACCESS_KEY_ID=
+R2_SECRET_ACCESS_KEY=
+
+# Optional local overrides. Deployed defaults live in wrangler.jsonc.
+# DRY_RUN=true
+# RETENTION_DAYS=7
+# JURISDICTIONS=default
+# BUCKETS=db-backups,postgres-backups
+# BACKUP_SUFFIXES=.sql,.sql.gz,.dump,.dump.gz,.backup,.bak

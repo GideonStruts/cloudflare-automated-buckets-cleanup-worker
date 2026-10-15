@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "automated-bucket-cleanups",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-15",
+  "workers_dev": false,
+  "preview_urls": false,
+  "observability": {
+    "enabled": true
+  },
+  "triggers": {
+    // 00:00 UTC every day. Cron triggers always use UTC.
+    "crons": ["0 0 * * *"]
+  },
+  "vars": {
+    "RETENTION_DAYS": "7",
+    "DRY_RUN": "true",
+    "JURISDICTIONS": "default",
+    "BACKUP_SUFFIXES": ".sql,.sql.gz,.sql.bz2,.sql.xz,.sql.zip,.sql.zst,.dump,.dump.gz,.dump.bz2,.backup,.bak,.rdb"
+  }
+}
